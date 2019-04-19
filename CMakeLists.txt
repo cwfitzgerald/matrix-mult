@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.12)
 project(matrix-mult LANGUAGES CXX)
 
+set(CMAKE_CXX_STANDARD 17)
+
 find_package(benchmark CONFIG REQUIRED)
 
 file(GLOB_RECURSE SSE_FILES LIST_DIRECTORIES false CONFIGURE_DEPENDS "*-sse.cpp")

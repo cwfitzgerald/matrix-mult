@@ -3,11 +3,7 @@
 #include <mmintrin.h>
 #include <xmmintrin.h>
 
-void FUNCTION_NAME(cwf)(float const * __restrict left, float const * __restrict right, float* __restrict ret) {
-	float const * a = &left[0];
-	float const * b = &right[0];
-	float* r = &ret[0];
-
+void FUNCTION_NAME(cwf)(float const * __restrict a, float const * __restrict b, float* __restrict r) {
 	__m128 row1 = _mm_loadu_ps(b + 0);
 	__m128 row2 = _mm_loadu_ps(b + 4);
 	__m128 row3 = _mm_loadu_ps(b + 8);
