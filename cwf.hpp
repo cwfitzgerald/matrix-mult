@@ -3,9 +3,9 @@
 #include <mmintrin.h>
 #include <xmmintrin.h>
 
-void FUNCTION_NAME(cwf)(float* left, float* right, float* ret) {
-	float* a = &left[0];
-	float* b = &right[0];
+void FUNCTION_NAME(cwf)(float const * __restrict left, float const * __restrict right, float* __restrict ret) {
+	float const * a = &left[0];
+	float const * b = &right[0];
 	float* r = &ret[0];
 
 	__m128 row1 = _mm_loadu_ps(b + 0);

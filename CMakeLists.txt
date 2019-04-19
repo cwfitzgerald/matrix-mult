@@ -11,5 +11,5 @@ set_property(SOURCE ${SSE_FILES} benchmark.cpp APPEND PROPERTY COMPILE_FLAGS "-m
 set_property(SOURCE ${AVX_FILES} APPEND PROPERTY COMPILE_FLAGS "-mavx2 -mfma")
 
 add_executable(matrix-mult ${SSE_FILES} ${AVX_FILES} ${CPP_FILES} benchmark.cpp)
-target_compile_options(matrix-mult PRIVATE -fdiagnostics-color=always -ffast-math)
+target_compile_options(matrix-mult PRIVATE -fdiagnostics-color=always)
 target_link_libraries(matrix-mult PRIVATE benchmark::benchmark benchmark::benchmark_main)

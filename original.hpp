@@ -1,6 +1,6 @@
 #include "name.hpp"
 
-void FUNCTION_NAME(original)(float* mat, float* mat2, float* dest) {
+void FUNCTION_NAME(original)(float const * __restrict mat, float const * __restrict mat2, float* __restrict dest) {
     // Cache the matrix values (makes for huge speed increases!)
     float a00 = mat[0], a01 = mat[1], a02 = mat[2], a03 = mat[3],
         a10 = mat[4], a11 = mat[5], a12 = mat[6], a13 = mat[7],

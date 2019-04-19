@@ -2,7 +2,7 @@
 
 #include <immintrin.h>
 
-void FUNCTION_NAME(jodie)(float* a, float* b, float* c) {
+void FUNCTION_NAME(jodie)(float const * __restrict a, float const * __restrict b, float* __restrict c) {
 	__m128 row1 = _mm_loadu_ps(&b[0] );
 	__m128 row2 = _mm_loadu_ps(&b[4] );
 	__m128 row3 = _mm_loadu_ps(&b[8] );
